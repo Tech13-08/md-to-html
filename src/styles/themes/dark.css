@@ -1,0 +1,71 @@
+/* Dark theme variables */
+
+:root {
+  /* Colors */
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --heading-color: #f0f6fc;
+  --text-muted: #8b949e;
+  --link-color: #58a6ff;
+  --link-hover-color: #79c0ff;
+  --border-color: #30363d;
+  
+  /* Code */
+  --code-bg: #161b22;
+  --code-color: #c9d1d9;
+  --code-border: #30363d;
+  
+  /* Blockquotes */
+  --quote-bg: #161b22;
+  --quote-color: #8b949e;
+  --quote-border: #30363d;
+  
+  /* Tables */
+  --table-bg: #0d1117;
+  --table-border: #30363d;
+  --table-header-bg: #161b22;
+  --table-header-color: #f0f6fc;
+  --table-row-even: #161b22;
+  
+  /* Other */
+  --hr-color: #30363d;
+}
+
+/* Dark theme specific styles */
+.dark-theme {
+  color-scheme: dark;
+}
+
+.dark-theme pre {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+}
+
+.dark-theme code {
+  background-color: rgba(110, 118, 129, 0.4);
+  color: #c9d1d9;
+}
+
+.dark-theme blockquote {
+  background-color: #161b22;
+  border-left-color: #30363d;
+  color: #8b949e;
+}
+
+.dark-theme table {
+  background-color: #0d1117;
+  border-color: #30363d;
+}
+
+.dark-theme th {
+  background-color: #161b22;
+  color: #f0f6fc;
+}
+
+.dark-theme tr:nth-child(even) {
+  background-color: #161b22;
+}
+
+.dark-theme img {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}

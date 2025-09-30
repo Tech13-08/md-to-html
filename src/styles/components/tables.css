@@ -1,0 +1,139 @@
+/* Table component styles */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  background-color: var(--table-bg);
+  border: 1px solid var(--table-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-color);
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--table-border);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--table-border);
+  vertical-align: top;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-row-even);
+}
+
+tr:hover {
+  background-color: var(--table-row-hover, rgba(0, 0, 0, 0.02));
+}
+
+/* Table alignment */
+table th:first-child,
+table td:first-child {
+  padding-left: 1.5rem;
+}
+
+table th:last-child,
+table td:last-child {
+  padding-right: 1.5rem;
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.875rem;
+  }
+  
+  th, td {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  table th:first-child,
+  table td:first-child {
+    padding-left: 1rem;
+  }
+  
+  table th:last-child,
+  table td:last-child {
+    padding-right: 1rem;
+  }
+}
+
+/* Table with horizontal scroll on small screens */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+  min-width: 600px;
+}
+
+/* Striped table variant */
+.table-striped tr:nth-child(odd) {
+  background-color: var(--table-bg);
+}
+
+.table-striped tr:nth-child(even) {
+  background-color: var(--table-row-even);
+}
+
+/* Bordered table variant */
+.table-bordered {
+  border: 2px solid var(--table-border);
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid var(--table-border);
+}
+
+/* Compact table variant */
+.table-compact th,
+.table-compact td {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Table with fixed header */
+.table-fixed-header {
+  position: relative;
+}
+
+.table-fixed-header thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table-fixed-header thead th {
+  background-color: var(--table-header-bg);
+  border-bottom: 2px solid var(--table-border);
+}
+
+/* Dark theme table adjustments */
+.dark-theme tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-theme .table-striped tr:nth-child(odd) {
+  background-color: var(--table-bg);
+}
+
+.dark-theme .table-striped tr:nth-child(even) {
+  background-color: var(--table-row-even);
+}

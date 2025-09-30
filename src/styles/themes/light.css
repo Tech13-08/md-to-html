@@ -1,0 +1,67 @@
+/* Light theme variables */
+
+:root {
+  /* Colors */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --heading-color: #1a1a1a;
+  --text-muted: #666666;
+  --link-color: #0066cc;
+  --link-hover-color: #004499;
+  --border-color: #e1e5e9;
+  
+  /* Code */
+  --code-bg: #f6f8fa;
+  --code-color: #24292e;
+  --code-border: #e1e5e9;
+  
+  /* Blockquotes */
+  --quote-bg: #f8f9fa;
+  --quote-color: #6a737d;
+  --quote-border: #d1d5da;
+  
+  /* Tables */
+  --table-bg: #ffffff;
+  --table-border: #d1d5da;
+  --table-header-bg: #f6f8fa;
+  --table-header-color: #24292e;
+  --table-row-even: #f6f8fa;
+  
+  /* Other */
+  --hr-color: #d1d5da;
+}
+
+/* Light theme specific styles */
+.light-theme {
+  color-scheme: light;
+}
+
+.light-theme pre {
+  background-color: #f6f8fa;
+  border: 1px solid #e1e5e9;
+}
+
+.light-theme code {
+  background-color: rgba(175, 184, 193, 0.2);
+  color: #24292e;
+}
+
+.light-theme blockquote {
+  background-color: #f8f9fa;
+  border-left-color: #d1d5da;
+  color: #6a737d;
+}
+
+.light-theme table {
+  background-color: #ffffff;
+  border-color: #d1d5da;
+}
+
+.light-theme th {
+  background-color: #f6f8fa;
+  color: #24292e;
+}
+
+.light-theme tr:nth-child(even) {
+  background-color: #f6f8fa;
+}

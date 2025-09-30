@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Markdown to HTML Converter</h1>
+<p>A powerful tool for converting Markdown files to beautifully styled HTML documents.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>Full Markdown Support</strong><em>Full Markdown Support</em>*: Complete GitHub Flavored Markdown support</li>
+<li><strong>Syntax Highlighting</strong><em>Syntax Highlighting</em>*: Beautiful code highlighting with multiple themes</li>
+<li><strong>Responsive Design</strong><em>Responsive Design</em>*: Mobile-first responsive layouts</li>
+<li><strong>Multiple Themes</strong><em>Multiple Themes</em>*: Light and dark theme support</li>
+<li><strong>CLI Interface</strong><em>CLI Interface</em>*: Easy-to-use command-line tool</li>
+</ul>
+<h2>Installation</h2>
+<pre><code class="language-bash">npm install -g md-to-html</code></pre>
+<h2>Usage</h2>
+<h3>Basic Conversion</h3>
+<pre><code class="language-bash"><span class="hljs-comment"># Convert single file</span>
+md-to-html convert document.md
+
+<span class="hljs-comment"># Convert with custom output</span>
+md-to-html convert document.md output.html
+
+<span class="hljs-comment"># Convert with dark theme</span>
+md-to-html convert document.md --theme dark</code></pre>
+<h3>Batch Processing</h3>
+<pre><code class="language-bash"><span class="hljs-comment"># Convert all markdown files in directory</span>
+md-to-html batch <span class="hljs-string">&quot;*.md&quot;</span> --output-dir ./html
+
+<span class="hljs-comment"># Convert with specific patterns</span>
+md-to-html batch <span class="hljs-string">&quot;docs/*.md&quot;</span> <span class="hljs-string">&quot;guides/*.md&quot;</span> --output-dir ./build</code></pre>
+<h3>Watch Mode</h3>
+<pre><code class="language-bash"><span class="hljs-comment"># Auto-convert on file changes</span>
+md-to-html watch document.md
+
+<span class="hljs-comment"># Watch entire directory</span>
+md-to-html watch ./docs --output-dir ./html</code></pre>
+<h2>Code Examples</h2>
+<h3>JavaScript</h3>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> converter = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MarkdownConverter</span>({
+  <span class="hljs-attr">theme</span>: <span class="hljs-string">&#x27;dark&#x27;</span>,
+  <span class="hljs-attr">highlight</span>: <span class="hljs-literal">true</span>
+});
+
+<span class="hljs-keyword">const</span> html = converter.<span class="hljs-title function_">convert</span>(markdown);</code></pre>
+<h3>Python</h3>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> md_to_html
+
+converter = md_to_html.Converter(theme=<span class="hljs-string">&#x27;dark&#x27;</span>)
+html = converter.convert(markdown)</code></pre>
+<h3>CSS</h3>
+<pre><code class="language-css"><span class="hljs-comment">/* Custom styling */</span>
+<span class="hljs-selector-class">.markdown-content</span> {
+  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">800px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;
+}
+
+<span class="hljs-selector-class">.markdown-content</span> <span class="hljs-selector-tag">h1</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
+  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">2px</span> solid <span class="hljs-number">#eee</span>;
+}</code></pre>
+<h2>Tables</h2>
+<table>
+<tr><th>Feature</th><th>Support</th><th>Notes</th></tr>
+<tr><td>---------</td><td>---------</td><td>-------</td></tr>
+<tr><td>Headers</td><td>✅</td><td>H1-H6 supported</td></tr>
+<tr><td>Lists</td><td>✅</td><td>Ordered and unordered</td></tr>
+<tr><td>Code</td><td>✅</td><td>With syntax highlighting</td></tr>
+<tr><td>Tables</td><td>✅</td><td>Responsive design</td></tr>
+<tr><td>Links</td><td>✅</td><td>Auto-detection</td></tr>
+<tr><td>Images</td><td>✅</td><td>Optimized loading</td></tr>
+</table>
+<h2>Blockquotes</h2>
+<blockquote>This is a blockquote example. It can contain multiple paragraphs and other markdown elements.</blockquote>
+<blockquote></blockquote>
+<blockquote>- Lists work inside blockquotes</blockquote>
+<blockquote>- <strong>Bold text</strong><em>Bold text</em><em> and </em>italic text*</blockquote>
+<blockquote>- <code>Inline code</code> is also supported</blockquote>
+<h2>Math Expressions</h2>
+<p>Inline math: $E = mc^2$</p>
+<p>Block math:</p>
+<p>$$</p>
+<p>\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}</p>
+<p>$$</p>
+<h2>Links and Images</h2>
+<ul>
+<li><a href="https://github.com/example/md-to-html">GitHub Repository</a></li>
+<li><a href="https://docs.example.com">Documentation</a></li>
+<li><a href="https://api.example.com">API Reference</a></li>
+</ul>
+<p><img src="https://via.placeholder.com/400x200?text=Sample+Image" alt="Sample Image" /><a href="https://via.placeholder.com/400x200?text=Sample+Image">Sample Image</a></p>
+<h2>Configuration</h2>
+<p>Create a config file at <code>~/.md-to-html/config.json</code>:</p>
+<pre><code class="language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">&quot;theme&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;light&quot;</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;highlight&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;toc&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;math&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;responsive&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">&quot;printStyles&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span>
+<span class="hljs-punctuation">}</span></code></pre>
+<h2>Advanced Usage</h2>
+<h3>Custom Themes</h3>
+<p>You can create custom themes by extending the base CSS:</p>
+<pre><code class="language-css"><span class="hljs-selector-pseudo">:root</span> {
+  <span class="hljs-attr">--bg-color</span>: <span class="hljs-number">#ffffff</span>;
+  <span class="hljs-attr">--text-color</span>: <span class="hljs-number">#333333</span>;
+  <span class="hljs-attr">--link-color</span>: <span class="hljs-number">#0066cc</span>;
+  <span class="hljs-comment">/* ... more variables */</span>
+}</code></pre>
+<h3>Plugin System</h3>
+<p>The converter supports plugins for extended functionality:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> converter = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MarkdownConverter</span>({
+  <span class="hljs-attr">plugins</span>: [
+    <span class="hljs-string">&#x27;toc&#x27;</span>,
+    <span class="hljs-string">&#x27;math&#x27;</span>,
+    <span class="hljs-string">&#x27;emoji&#x27;</span>,
+    <span class="hljs-string">&#x27;footnotes&#x27;</span>
+  ]
+});</code></pre>
+<h2>Performance</h2>
+<ul>
+<li><strong>Fast Conversion</strong><em>Fast Conversion</em>*: Optimized parsing and rendering</li>
+<li><strong>Memory Efficient</strong><em>Memory Efficient</em>*: Stream processing for large files</li>
+<li><strong>Concurrent Processing</strong><em>Concurrent Processing</em>*: Batch operations with configurable concurrency</li>
+<li><strong>Caching</strong><em>Caching</em>*: Smart caching for repeated operations</li>
+</ul>
+<h2>Troubleshooting</h2>
+<h3>Common Issues</h3>
+<ol>
+<li><strong>File not found</strong><em>File not found</em>*: Check file path and permissions</li>
+<li><strong>Syntax errors</strong><em>Syntax errors</em>*: Validate markdown syntax</li>
+<li><strong>Theme issues</strong><em>Theme issues</em>*: Ensure CSS files are accessible</li>
+<li><strong>Performance</strong><em>Performance</em>*: Use batch processing for large files</li>
+</ol>
+<h3>Debug Mode</h3>
+<p>Enable verbose output for debugging:</p>
+<pre><code class="language-bash">md-to-html convert document.md --verbose</code></pre>
+<h2>Contributing</h2>
+<p>We welcome contributions! Please see our <a href="CONTRIBUTING.md">Contributing Guide</a> for details.</p>
+<h2>License</h2>
+<p>MIT License - see <a href="LICENSE">LICENSE</a> file for details.</p>
+<hr>
+<p><em>Built with ❤️ for the developer community</em></p>
+    </div>
+</body>
+</html>

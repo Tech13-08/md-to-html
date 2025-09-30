@@ -1,0 +1,42 @@
+{
+  "name": "md-to-html",
+  "version": "1.0.0",
+  "description": "A system that converts Markdown files to stylized HTML with modern CSS",
+  "main": "src/cli/index.js",
+  "bin": {
+    "md-to-html": "./src/cli/index.js"
+  },
+  "scripts": {
+    "start": "node src/cli/index.js",
+    "dev": "nodemon src/cli/index.js",
+    "test": "jest",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write src/**/*.js"
+  },
+  "keywords": [
+    "markdown",
+    "html",
+    "converter",
+    "cli",
+    "styling"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^9.1.6",
+    "highlight.js": "^11.9.0",
+    "commander": "^11.1.0",
+    "chokidar": "^3.5.3",
+    "fs-extra": "^11.1.1",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
