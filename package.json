@@ -11,7 +11,9 @@
     "dev": "nodemon src/cli/index.js",
     "test": "jest",
     "lint": "eslint src/**/*.js",
-    "format": "prettier --write src/**/*.js"
+    "format": "prettier --write src/**/*.js",
+    "agent": "node background-agent.js",
+    "start-agent": "node start-agent.js"
   },
   "keywords": [
     "markdown",
